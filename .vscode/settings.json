@@ -1,0 +1,20 @@
+{
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "typescript": "typescript",
+    "typescriptreact": "typescriptreact",
+    "javascriptreact": "javascriptreact"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "editor.inlineSuggest.enabled": true
+}

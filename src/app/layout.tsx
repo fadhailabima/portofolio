@@ -7,29 +7,32 @@ import "aos/dist/aos.css";
 
 import "@/styles/globals.css";
 import { poppins, roboto_mono } from "@/constants/font";
-import { Contact, Navbar, Footer } from "@/components";
+import { Contact, Navbar, Footer, ParticleBackground, LoadingScreen, ScrollIndicator } from "@/components";
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
 
   useEffect(() => {
-    AOS.init({});
+    AOS.init({
+      duration: 800,
+      easing: "ease-out-cubic",
+      once: false,
+      offset: 100
+    });
   }, []);
 
   const superadmin = ["/auth/superadmin", "/dashboard/superadmin"];
 
   return (
-    <html
-      lang="en"
-      className={`${poppins.variable} ${roboto_mono.variable} scroll-smooth `}
-    >
+    <html lang="en" className={`${poppins.variable} ${roboto_mono.variable} scroll-smooth`}>
       <head />
-      <body>
+      <body className="relative">
+        <LoadingScreen />
+        <ScrollIndicator />
+        <ParticleBackground />
         {superadmin.includes(pathname) ? null : <Navbar />}
         {superadmin.includes(pathname) ? null : <Contact />}
-        <main className={`${superadmin.includes(pathname) ? "" : "container"}`}>
-          {children}
-        </main>
+        <main className={`relative z-10 ${superadmin.includes(pathname) ? "" : "container"}`}>{children}</main>
         {superadmin.includes(pathname) ? null : <Footer />}
       </body>
     </html>

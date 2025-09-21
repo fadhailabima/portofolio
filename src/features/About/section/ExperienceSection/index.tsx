@@ -1,9 +1,7 @@
 "use client";
 
 import React, { FC, useState } from "react";
-import { ContentCertification } from "./content-certification";
 import { ContentEducation } from "./content-education";
-import { ContentAward } from "./content-awards";
 import { ContentOrganization } from "./content-organization";
 import { ContentWorkExperience } from "./content-work-experience";
 
@@ -18,18 +16,12 @@ const ExperienceSection: FC = () => {
     selectedContent = <ContentOrganization />;
   } else if (activeCategory === "experience") {
     selectedContent = <ContentWorkExperience />;
-  } else if (activeCategory === "awards") {
-    selectedContent = <ContentAward />;
-  } else if (activeCategory === "certification") {
-    selectedContent = <ContentCertification />;
   }
 
   const categories = [
     { name: "Education", value: "education" },
     { name: "Organizations", value: "organizations" },
     { name: "Work Experience", value: "experience" },
-    { name: "Awards", value: "awards" },
-    { name: "Certification", value: "certification" },
   ];
 
   return (

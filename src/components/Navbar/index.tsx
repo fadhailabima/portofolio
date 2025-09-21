@@ -15,15 +15,9 @@ export default function Navbar() {
     const handleScroll = () => {
       const currentScrollPosition = window.pageYOffset;
       setIsPageTop(currentScrollPosition === 0);
-      if (
-        previousCurrentScrollPosition.current < currentScrollPosition &&
-        !isNavbarVisible
-      ) {
+      if (previousCurrentScrollPosition.current < currentScrollPosition && !isNavbarVisible) {
         setIsNavbarVisible(true);
-      } else if (
-        previousCurrentScrollPosition.current > currentScrollPosition &&
-        isNavbarVisible
-      ) {
+      } else if (previousCurrentScrollPosition.current > currentScrollPosition && isNavbarVisible) {
         setIsNavbarVisible(false);
       }
       previousCurrentScrollPosition.current = currentScrollPosition;
@@ -43,35 +37,62 @@ export default function Navbar() {
 
   return (
     <div
-      className={`fixed top-0 z-[98] w-screen ${
+      className={`fixed top-0 z-[999] w-screen ${
         !isNavbarVisible
           ? !isPageTop
-            ? `translate-y-0  bg-base_col shadow-[0_10px_30px_-10px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out ${
-                !isOpen ? "bg-opacity-80 backdrop-blur-md" : "bg-opacity-100"
+            ? `translate-y-0 border-b border-white/10 bg-base_col/80 shadow-[0_10px_30px_-10px_rgba(131,219,255,0.1)] backdrop-blur-xl transition-all duration-300 ease-in-out ${
+                !isOpen ? "bg-opacity-80" : "bg-opacity-95"
               }`
-            : " bg-base_col bg-opacity-80 py-3 transition-all"
-          : `transition-all duration-300 ease-in-out ${
-              !isPageTop ? "-translate-y-full" : "translate-y-0"
-            } `
+            : "bg-base_col/60 py-3 backdrop-blur-sm transition-all"
+          : `transition-all duration-300 ease-in-out ${!isPageTop ? "-translate-y-full" : "translate-y-0"}`
       }`}
     >
-      <div className="flex h-24 items-center justify-between px-7 lg:px-14">
-        <Link href="/" className="text-accent" scroll={false}>
+      <div className="flex h-16 items-center justify-between px-7 lg:px-14">
+        <Link href="/" className="group flex items-center gap-3 text-accent" scroll={false}>
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 64 64"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="transition-transform duration-300 group-hover:scale-110"
+          >
+            <defs>
+              <linearGradient id="navLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style={{ stopColor: "#83DBFF", stopOpacity: 1 }} />
+                <stop offset="50%" style={{ stopColor: "#5EEAD4", stopOpacity: 1 }} />
+                <stop offset="100%" style={{ stopColor: "#83DBFF", stopOpacity: 1 }} />
+              </linearGradient>
+            </defs>
+
+            {/* Background Circle */}
+            <circle cx="32" cy="32" r="28" fill="url(#navLogoGradient)" opacity="0.1" />
+
+            {/* Main Text "F" for compact navbar */}
+            <text
+              x="32"
+              y="42"
+              fontFamily="Arial, sans-serif"
+              fontSize="24"
+              fontWeight="bold"
+              textAnchor="middle"
+              fill="url(#navLogoGradient)"
+            >
+              F
+            </text>
+          </svg>
           <h1
-            className="text-2xl font-semibold"
+            className="transform bg-gradient-to-r from-accent to-secondary bg-clip-text text-2xl font-semibold text-transparent transition-all duration-300 group-hover:scale-105 group-hover:from-secondary group-hover:to-accent"
             data-aos="fade-down"
             data-aos-once="true"
           >
-            Ulinnaja.
+            Fadhail A Bima
           </h1>
         </Link>
 
-        {/* Hamburger Button */}
         <div className="flex lg:hidden">
           <button
-            aria-label={
-              !isOpen ? "Open Navigation Menu" : "Close Navigation Menu"
-            }
+            aria-label={!isOpen ? "Open Navigation Menu" : "Close Navigation Menu"}
             onClick={() => setIsOpen(!isOpen)}
             className="relative z-30"
           >
@@ -83,26 +104,27 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Navbar Text */}
-        <div className="text-base-content hidden  gap-10 lg:flex">
+        <div className="text-base-content hidden gap-10 lg:flex">
           {NAVBAR_ITEMS.map((item, index) => (
             <Link
               href={item.href}
-              className="flex flex-col items-end font-mono text-sm  text-primary transition-all duration-300 hover:text-accent xl:text-base"
+              className="group relative flex flex-col items-end overflow-hidden font-mono text-sm text-primary transition-all duration-300 hover:text-accent xl:text-base"
               key={index}
               data-aos="fade-down"
               data-aos-delay={`${index}00`}
               data-aos-once="true"
               scroll={false}
             >
-              <span className="text-xs text-accent">{item.number}</span>
-              <p>{`// ${item.title}`}</p>
+              <div className="absolute inset-0 origin-center scale-x-0 transform rounded-lg bg-gradient-to-r from-accent/0 via-accent/10 to-accent/0 transition-transform duration-300 group-hover:scale-x-100" />
+              <span className="relative text-xs text-accent transition-colors duration-300 group-hover:text-secondary">
+                {item.number}
+              </span>
+              <p className="relative transition-transform duration-300 group-hover:scale-105 group-hover:transform">{`// ${item.title}`}</p>
             </Link>
           ))}
         </div>
       </div>
 
-      {/* Sidebar */}
       <div
         className={`fixed top-0 h-screen w-full lg:hidden ${
           !isOpen

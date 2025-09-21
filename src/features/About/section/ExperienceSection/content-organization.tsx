@@ -1,59 +1,42 @@
 export const ContentOrganization = () => {
   const datas = [
     {
-      title: "Staff of Media and Publications",
-      url: "https://www.instagram.com/genbi_solo/?hl=id",
-      organization: "GENBI SOLO",
-      date: "Apr 2023 - Present",
+      title: "Chairman Comittee",
+      organization: "I-Console 2023",
+      date: "May 2023 - Feb 2024",
       description: (
         <>
+          <li>Leading consisting of 75 person</li>
+          <li>Providing guidance/support to new students</li>
           <li>
-            Being selected as one of the recipients of the Bank Indonesia
-            Scholarship in 2023 is a source of pride for myself. Additionally,
-            Bank Indonesia runs a program called the "Generasi Baru Indonesia"
-            (Genbi), which aims to cultivate a young generation with leadership
-            qualities, creativity, innovation, and integrity.
+            Introducing the culture and academic system in the computer science
+            department, impacting 190+ new students
           </li>
         </>
       ),
     },
     {
-      title: "Staff of Interest and Talent",
-      url: "https://www.instagram.com/himatifums/",
-      organization: "HIMATIF UMS",
-      date: "Dec 2020 - Dec 2022",
+      title: "Head of Seniora Division",
+      url: "https://www.instagram.com/hmif_undip/",
+      organization: "HMIF UNDIP",
+      date: "Feb 2023 - Dec 2023",
       description: (
         <>
+          <li>Leading team consisting of 11 person</li>
           <li>
-            In the Student Association of Informatics Engineering at UMS
-            (HIMATIF), I hold a position as the coordinator of the Interest and
-            Talent Division, which oversees various work programs such as
-            Himatif's social media management, Himatif Portable Club (HPC),
-            Profile Video creation, Parade of Informatics Engineering (PARTI),
-            and UNCORE Digital Magazine.
+            Actively participates in the development and refinement of the
+            organization strategic
           </li>
           <li>
-            One of the biggest events is the{" "}
-            <a
-              href="https://www.instagram.com/parti.ums/"
-              className="text-underline"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Parade of Informatics Engineering
-            </a>
-            (PARTI), where I served as the Head of Publication and
-            Documentation, responsible for organizing all the event's visual
-            documentation and preparations, including photos, videos,{" "}
-            <a
-              href="https://www.instagram.com/p/CiZACw0JXmC/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-underline"
-            >
-              3D mascot
-            </a>
-            , and media streaming.
+            Responsible for all matters that relating with organization that
+            aims to develop
+          </li>
+          <li>
+            Evaluate regarding the staff performance and activities carried out
+            1 time in 2 months
+          </li>
+          <li>
+            Make a decision if any problem regarding internal or external issues
           </li>
         </>
       ),

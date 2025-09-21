@@ -1,142 +1,127 @@
-import bootstrapIcon from "@icons/bootstrap.svg";
 import tailwindIcon from "@icons/tailwind.svg";
-import reactIcon from "@icons/react.svg";
 import nextjsIcon from "@icons/nextjs.svg";
 import laravelIcon from "@icons/laravel.svg";
+import mysqlIcon from "@icons/mysql.svg";
+import postgresqlIcon from "@icons/postgresql.svg";
+import oracleIcon from "@icons/oracle.svg";
+import viteIcon from "@icons/vite.svg";
 import nodejsIcon from "@icons/nodejs.svg";
-import expressIcon from "@icons/express.svg";
-import mongodbIcon from "@icons/mongodb.svg";
+import pythonIcon from "@icons/python.svg";
 import Image from "next/image";
 
 export const ContentWorkExperience = () => {
   const datas = [
     {
-      title: "Generasi GIGIH 3.0 - Fullstack Engineer Apprenticeship",
-      url: "https://www.anakbangsabisa.org/generasi-gigih/program",
-      company: "GoTo Impact Foundation",
-      date: "Jun 2023 - Present",
+      title: "IT Developer Internship",
+      url: "https://widyapresisisolusi.com/",
+      company: "PT. Widya Presisi Solusi",
+      date: "Okt 2024 - Jun 2025",
       description: (
-        <p>
-          I underwent skill development encompassing both soft and hard skills,
-          emphasizing the MERN technology stack (MongoDB, Express, React,
-          Node.js), including crafting a web-based{" "}
-          <a
-            href="https://github.com/ulinnajaaldi/gigih-3.0-fs-spotify"
-            className="text-underline"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Spotify clone
-          </a>{" "}
-          with the official Spotify API, setting up a REST API for a Tokopedia
-          Play clone using Express and MongoDB, and building a{" "}
-          <a
-            href="https://github.com/ulinnajaaldi/gigih-3.0-fs-final-project"
-            className="text-underline"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Tokopedia Play clone
-          </a>{" "}
-          website utilizing the MERN technology stack.
-        </p>
+        <>
+          <li>
+            Migrated the HRIS application from Oracle APEX to Laravel, improving system performance, scalability, and
+            maintainability.
+          </li>
+          <li>
+            Assisted in designing mockups for the Performance Management System (PMS) using Oracle APEX, collaborating with the
+            product team to enhance user experience.
+          </li>
+          <li>
+            Migrated the Company Profile application from native PHP to Laravel, resulting in better code structure, security,
+            and integration capabilities.
+          </li>
+        </>
       ),
       techs: [
         {
-          name: "MongoDB",
-          icon: mongodbIcon,
+          name: "PostgreSQL",
+          icon: postgresqlIcon
         },
         {
-          name: "Express",
-          icon: expressIcon,
+          name: "Laravel",
+          icon: laravelIcon
         },
         {
-          name: "React",
-          icon: reactIcon,
+          name: "Oracle",
+          icon: oracleIcon
         },
         {
-          name: "NodeJS",
-          icon: nodejsIcon,
+          name: "Node.js",
+          icon: nodejsIcon
         },
-      ],
+      ]
     },
     {
-      title: "Frontend Engineer",
-      url: "https://www.instagram.com/io.ums.official/",
-      company: "BKUI Universitas Muhammadiyah Surakarta",
-      date: "Jun 2023 - Aug 2023",
+      title: "Web Developer Internship",
+      url: "https://thedigitalcellar.com/",
+      company: "The Digital Cellar",
+      date: "Mar 2024 - Jun 2024",
       description: (
-        <p>
-          I am responsible for developing the{" "}
-          <a
-            href="https://galeriinovasi.ums.ac.id/"
-            className="text-underline"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Galeri Inovasi UMS
-          </a>{" "}
-          application system, including selecting and implementing an
-          appropriate tech stack for efficient front-end development,
-          collaborating with back-end developers for seamless integration,
-          optimizing website performance, conducting testing, debugging, and
-          troubleshooting front-end issues in collaboration with
-          cross-functional teams when needed.
-        </p>
+        <>
+          <li>
+            Collaborated effectively with stakeholders to gather and analyze business requirements, ensuring a comprehensive
+            understanding of the app's functionalities and workflow.
+          </li>
+          <li>Spearheaded the development of a super app utilizing Next.js for frontend architecture.</li>
+          <li>Coordinated closely with backend developers to facilitate API consumption and data fetching processes.</li>
+          <li>Contributing to testing procedures and refining functionalities.</li>
+        </>
       ),
       techs: [
         {
           name: "NextJS",
-          icon: nextjsIcon,
+          icon: nextjsIcon
         },
         {
           name: "TailwindCSS",
-          icon: tailwindIcon,
+          icon: tailwindIcon
         },
-      ],
+      ]
     },
     {
       title: "Fullstack Web Developer Intern",
-      url: "https://www.socmediaagency.com/",
-      company: "SOC MEDIA GRUP",
-      date: "Feb 2023 - May 2023",
+      url: "https://saprotan-utama.com/",
+      company: "PT. Saprotan Utama Nusantara",
+      date: "Jan 2024 - Mar 2024",
       description: (
-        <p>
-          I contributed to an admin dashboard for a SOCLife site, collaborated
-          via GitHub and GitLab, and played a key role as a Front-End Developer
-          in building the{" "}
-          <a
-            href="https://github.com/sgitwhyd/MejengProject"
-            className="text-underline"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Mejeng
-          </a>{" "}
-          platform, ensuring functionality. I followed code best practices with
-          descriptive commits, organized repositories, and established branching
-          strategies.
-        </p>
+        <>
+          <li>
+            Collaborated with stakeholders to gather and analyze business requirements, ensuring a comprehensive understanding
+            of the warehouse processes and workflow.
+          </li>
+          <li>
+            Developed a Warehouse Management System (WMS) application utilizing the FIFO (First-In-First-Out) method to ensure
+            efficient and organized inventory management.
+          </li>
+          <li>Developed RESTful APIs using Laravel, enabling seamless communication between the frontend and backend.</li>
+          <li>Implemented authentication and authorization mechanisms to ensure secure access to the WMS.</li>
+          <li>Integrated Laravel Eloquent ORM for simplified database interactions and maintenance.</li>
+          <li>Utilized Next.js to create a dynamic and responsive user interface for the WMS</li>
+          <li>
+            Implemented interactive dashboards for real-time inventory tracking, order processing, and warehouse analytics.
+          </li>
+          <li>Integrated state management solutions for efficient data flow within the application.</li>
+        </>
       ),
       techs: [
         {
           name: "Laravel",
-          icon: laravelIcon,
+          icon: laravelIcon
         },
         {
-          name: "Bootsrap",
-          icon: bootstrapIcon,
+          name: "MySQL",
+          icon: mysqlIcon
         },
         {
           name: "NextJS",
-          icon: nextjsIcon,
+          icon: nextjsIcon
         },
         {
           name: "TailwindCSS",
-          icon: tailwindIcon,
+          icon: tailwindIcon
         },
-      ],
-    },
+      ]
+    }
   ];
 
   return (
@@ -148,12 +133,7 @@ export const ContentWorkExperience = () => {
             <span className="text-base text-accent">
               {" "}
               @
-              <a
-                href={data.url}
-                target="_blank"
-                rel="noreferrer"
-                className="text-underline"
-              >
+              <a href={data.url} target="_blank" rel="noreferrer" className="text-underline">
                 {data.company}
               </a>
             </span>
@@ -166,17 +146,8 @@ export const ContentWorkExperience = () => {
             <h4 className="mb-1 font-medium">Technologies used</h4>
             <div className="flex flex-wrap gap-2">
               {data.techs.map((tech, index) => (
-                <div
-                  key={index}
-                  className="rounded-md bg-accent/10 p-1"
-                  title={tech.name}
-                >
-                  <Image
-                    src={tech.icon}
-                    alt={tech.icon}
-                    width={28}
-                    height={28}
-                  />
+                <div key={index} className="rounded-md bg-accent/10 p-1" title={tech.name}>
+                  <Image src={tech.icon} alt={tech.icon} width={28} height={28} />
                 </div>
               ))}
             </div>
